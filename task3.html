@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            task3
+        </title>
+        <body>
+            <script>
+               let sum=+prompt('Яку суму ви хочете конвертувати? ', 0)
+                let convert_to=prompt('Виберіть в яку валюту конвертувати? Введіть одне із цих значеннь - US, EU, Gold',)
+                let result=0
+                if (sum!=null||undefined)
+                {
+                switch (convert_to)
+                {
+                    case ('US'):
+                    result=sum/25
+                    document.write(sum)
+                    document.write(' грн = ')
+                    document.write(result)
+                    document.write(' US <br/>')
+                    break;
+                    case 'EU':
+                    result=sum/30
+                    document.write(sum)
+                    document.write(' грн = ')
+                    document.write(result)
+                    document.write(' EU <br/>')
+                    break;
+
+                    case 'Gold':
+                    result=sum/25
+                    document.write(sum)
+                    document.write(' грн = ')
+                    document.write(result)
+                    document.write(' grams of gold<br/>')
+                    break;                  
+                }
+                }
+               else 
+               {
+                   alert('Неправильний параметр')
+                }
+
+
+                let sum1=prompt('Введіть суму для покупки, грн.', 0)
+                let result1=0
+                if (sum1<500)
+                {
+                result1=sum1-sum1/100
+                alert('Сума зі знижкою = '+ result1)
+                }
+                else if (sum1>=500||sum1<=100)
+                {
+                result1=sum1-sum1/20
+                alert('Сума зі знижкою = '+ result1)
+                }
+                else if(sum1>1000){
+                    result1=sum1-sum1/10+200
+                    alert('Сума зі знижкою = '+ result1)
+                }
+                
+                
+                
+                let count=0
+                let year1=+prompt('В якому році почалась перша світова',)
+                if (year1==1914){count++}
+                let year2=+prompt('В якому році почалась друга світова',)
+                if (year2==1939){count++}
+                let number_of_p=+prompt('Скільки планет у Сонячній системі',)
+                if (number_of_p==8){count++}
+                let capital=prompt('Назвіть столицю Португалії',)
+                if (capital=='Лісабон'){count++}
+                let capital2=prompt('Назвіть столицю Туреччини',)
+                if (capital2=='Анкара'){count++}
+                if (count==5) {count=6}
+                alert('Ваш результат = '+ count)
+
+
+            let num=prompt("Введіть 3 значне число?",)
+            if (num[0]==num[1]||num[0]==num[2]||num[1]==num[2]){alert("Це число містить однакові цифри")}
+
+            let key=prompt('Натисніть на кнопку від 1 до =',)
+                switch(key)
+                 {
+                    case '1':
+                    alert('!');
+                    break;
+                    case '2':
+                    alert('@');
+                    break;
+                    case '3':
+                    alert('#');
+                    break;
+                    case '4':
+                    alert('$');
+                    break;
+                    case '5':
+                    alert('%');
+                    break;
+                    case '6':
+                    alert('&');
+                    break;
+                     case '7':
+                    alert('&');
+                    break;
+                    case '8':
+                     alert('*');
+                     break;
+                    case '9':
+                    alert('(');
+                    break;
+                    case '0':
+                     alert(')');
+                     break;
+                    case '-':
+                    alert('_');
+                    break;
+                    case '=':
+                    alert('+');
+
+                }
+            </script>
+       
+        </body>
+    </head>
+</html>

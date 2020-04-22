@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>task2</title>
+     
+    </head>
+    <body>
+        <script src="lesson2.js"></script>
+     <script>
+            
+            let age = prompt('how old are you', 0);
+            document.write("Привіт мені ")
+            document.write(age)
+            document.write(' років <br/>')
+
+            const date_of_birth=prompt('Який рік твого народження', 2020)
+            d=new Date
+            let age2=d.getFullYear()-date_of_birth;
+            document.write('\nТобі ')
+            document.write(age2)
+            document.write(' років <br/>')
+
+            let a=+prompt('перша сторона трикутника' ,0)
+            let b=+prompt('перша сторона трикутника' ,0)
+            let c=+prompt('перша сторона трикутника' ,0)
+            let p=a+b+c;
+            document.write('Периметр трикутника = ')
+            document.write(p)
+                       
+            let R=prompt('Введіть радіус кола', 0)
+            let S=Math.PI*R*R;
+            document.write('<br/>Площа кола =')
+            document.write(S)
+
+            const V=50;
+            let time=prompt('Скільки годин вам ще потрібно їхати?',1)
+            let way=V*time;
+            document.write('<br/> Вам потрібно проїхати ще ')
+            document.write(way)
+            document.write(' км')
+
+            document.write('<br/>')
+            let change=+prompt('якщо ви хочете перевести милі в кілометри введіть 1, інакше 2', 1);
+            switch(change) 
+            {
+                case 1: 
+                let miles=prompt('Скільки милей?', 1)
+                let kilometrs=miles/0.62137;
+                document.write(miles)
+                document.write('милей = ')
+                document.write(kilometrs);
+                break;
+                case 2:  
+                let kilometrs1=prompt('Скільки кілометрів?', 1)
+               let miles1=kilometrs1*0.62137;
+                document.write(kilometrs1)
+                document.write('кілометрів = ')
+                document.write(miles1)
+                break;
+                default:
+                alert( 'Неправильне значення' );
+            }
+            document.write('<br/>')
+            let sum=prompt('Скільи грошей у вас на картці?', 0)
+            let price=prompt('Яка ціна з одну літру бензину', 1)
+            let number_of_liters=Math.floor(sum/price);
+            let remainder=sum-number_of_liters*price;
+            document.write('Ви зможете купити ')
+            document.write(number_of_liters)
+            document.write(' літрів бензину <br/>')
+            document.write('У вас залишиться ')
+            document.write(remainder)
+            document.write(' гривень ')
+
+
+
+        </script>
+         
+    </body>
+</html>
