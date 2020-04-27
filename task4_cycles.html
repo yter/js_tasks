@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            task4
+        </title>
+    </head>
+    <body>
+        <script>
+            let sum=0;
+            for(let i=0; i<=100; i++){
+            sum=sum+i;
+            }
+            alert('100!= '+ sum);
+
+            let arr5=[1, 2, 3, 4, 5]
+            for(let i=0; i<arr5.length; i++){
+            document.write(arr5[i]);
+            }
+
+           let max=0;
+            let arr1=[-1, 352, 5636, 2452, 324];
+            for(let i=0; i<arr1.length;i++){
+                if(arr1[i]>max){
+                max=arr1[i]
+                }
+            }
+            alert('max from array ='+ max);
+
+            
+            let zero=0;
+            let minus=0;
+            let plus=0;
+            for(let i=0; i<8;i++){
+                let number = +prompt('enter numbers',)
+                if (number==0){
+                     zero++}
+                else if(number>0)
+                     {plus++}
+                else {minus++}
+            }
+            alert('numbers=0 - ' +zero);
+            alert("numbesr<0 -" +minus);
+            alert("numbers>0 -" +plus);
+
+            /*------------------------------*/
+           for(let i=1; i<=9; i++){
+               let gain=8*i;
+               document.write('<br>'+'8*'+i+'='+gain)
+            }
+
+let arr=[2, 5, 9, 15, 0, 4];
+for(let i=0; i<arr.length;i++){
+    if (arr[i]<10&&arr[i]>3){
+    document.write('<br>'+'number>3 and <10 - '+arr[i])
+    }
+}
+
+/*--------------------------------------*/
+let boolean=true;
+while(boolean){
+boolean=confirm('Do you wont to make mathematical operations?')
+if(boolean){
+let a=+prompt('enter first number',)
+let b=+prompt('enter second number',)
+let action= prompt('enter action +, -, *, or /')
+switch (action){
+case '+':
+alert(a+'+'+b+' = '+ (a+b));
+break;
+case '-':
+alert(a+'-'+b+' = '+ (a-b));
+break;
+case '*':
+alert(a+'*'+b+' = '+ (a*b));
+break;
+case '/':
+alert(a+'/'+b+' = '+ (a/b));
+break;
+}}}
+
+
+
+
+        </script>
+    </body>
+    
+</html>
