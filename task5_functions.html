@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script>
+           function cub(a)
+            {
+                return a=a*a*a;
+            }
+           alert(cub(5));
+
+            function summ(a, b, c)
+            {
+                return ((a+b)/c)
+            }
+            alert(summ(4, 5, 3));
+
+            function a_day(d)
+            {
+                switch (d){
+                case 1:
+                alert('Monday');
+                break;
+                case 2:
+                alert('Tuesday');
+                break;
+                case 3:
+                alert('Wednesday');
+                break;
+                case 4:
+                alert('Thursday');
+                break;
+                case 5:
+                alert('Friday');
+                break;
+                case 6:
+                alert('Saturday');
+                break;
+                case 7:
+                alert('Sunday');
+                break;
+                }
+            }
+            a_day(2)
+
+            function factorial(a)
+            {
+                let factorial=1
+                for (let i=1; i<=a; i++)
+                factorial=factorial*i;
+                return factorial;
+                
+            }
+           alert(factorial(5));
+
+           function get_seconds(h, m, s)
+          { 
+              let seconds=0
+              return seconds=h*3600+m*60+s;
+          }
+          alert(get_seconds(4, 3, 2));
+
+
+          function to_hours(a)
+          {
+              if (a>86400){
+                alert('Більше одного дня');
+                }
+              else{
+              let hours=Math.floor(a/3600);
+              let minutes=Math.floor((a%3600)/60);
+              let seconds=(a%3600)%60;
+              if (hours<=9) hours='0'+hours;
+              if (minutes<=9) minutes='0'+minutes;
+              if (minutes<=9) minutes='0'+minutes;
+              alert (hours +': '+minutes+': '+seconds);
+              }
+          }
+
+            to_hours(3637);
+
+            /*
+            Стрілочні функції немають власного обєкта arguments, this
+            Вони неможуть використовувати ключове слово yield
+
+            */
+
+
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>
