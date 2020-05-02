@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script>
+      let cat={
+        name: 'bars',
+        age: 3,
+        weight: 2,
+        medium_spead: 20,
+        
+        get_info: function() {alert ('name - '+ this.name+' ,age - '+ this.age +' ,weight - '+this.weight+' ,medium spead - ' + this.medium_spead)},   
+        get_time: function(t) {alert(this.name + ' can go this distance per '+ t/this.medium_spead/12 +' d')},
+        set_name: function(name) {this.name=name}  
+      }
+cat.get_info();
+cat.get_time(1000);
+cat.set_name('bush');
+cat.get_info();
+
+let figure={length: 5,
+            width: 4,
+            perimetr: 0,
+            square: 0,
+            height: 0,
+            get_square: function(){this.square=this.length*this.width; alert('square = '+ this.square)},
+            get_perimetr: function(){this.perimetr=2*this.length+2*this.width; alert('perimetr = '+ this.perimetr)},
+            set_3D: function(height) {this.height=height}, 
+            set_name: function(name){this.name=name},
+            get_meters: function(){alert('length in meters = '+this.length/100+' width in meters = ' + this.width/100 +'heigth in meters = '+ this.height/100 )}
+            }
+
+figure.set_3D(7);
+
+figure.get_meters();
+
+
+let list=[{name:'orange',count:4, price: 50, buy:false, OutofStore: true},
+          {name:'apple',count: 3, price: 44, buy: true, OutofStore: true},
+          {name:'chery', count:5, price: 70, buy: true, OutofStore: true},
+          {name:'meat', count: 7, price: 100, buy: false, OutofStore: false},
+          {name:'bread', count: 2, price: 30, buy: true, OutofStore: false}   
+           ];
+         
+         
+          let buing= function(){this.buy=true; alert(this.buy)}
+         
+          let in_the_store = function(list){
+            let instore=[];
+            list.forEach(function(elem) {
+            
+            if (elem.OutofStore===false){instore.push(elem.name)};
+            })
+            alert(instore);
+            }
+
+            let out_of_store=function(list){
+              let out_store=[];
+              list.forEach(function(elem){
+                if(elem.OutofStore===true){out_store.push(elem.name)}})
+              alert(out_store)}
+
+
+            let bued=function(list){
+              let bued_products=[];
+              list.forEach(function(elem){
+              
+              if(elem.buy===true){bued_products.push(elem.name)}
+
+            })
+            alert(bued_products)}
+
+            let sum_of_bued=function(list){
+              let summ=0;
+              list.forEach(function(elem)
+              {
+               if(elem.buy===true)
+                {
+                 summ+=elem.price*elem.count;
+                }
+              })
+              alert(summ)
+            } 
+         let count_plus=function(list, name){list.forEach(function(elem){if(name===elem.name){elem.count++}})}
+         let count_minus=function(list, name){list.forEach(function(elem){if(name===elem.name&&elem.count>=1){elem.count--}})}
+     
+buing.call(list[0])
+in_the_store(list);
+out_of_store(list);
+bued(list);
+sum_of_bued(list);
+count_plus(list, 'apple')
+sum_of_bued(list)
+count_minus(list, 'apple')
+sum_of_bued(list)
+
+
+
+let worckers=[{name: "Yura", age: 55, hobby: ["films", "games", "hiking"], type: "Admin"},
+             {name: "Ivan", age: 28, hobby: ["films", "games", "swimming"], type: "Admin"},
+             {name: "Olya", age: 35, hobby: ["films", "reading books"], type: "program engenier"},
+             {name: "Bogdan", age: 45, hobby: ["footbal", "games", "mounting"], type: "Director"}];
+
+             let medium_age=function(worckers){
+               let medium=0;
+                worckers.forEach(function(elem){
+                  medium+=elem.age})
+                  medium=medium/worckers.length;
+                  alert(medium)}
+
+                let name_of_admins=function(worckers)
+                {
+                  let admins=[];
+                  worckers.forEach(function(elem){
+                    if(elem.type==="Admin")
+                      {admins.push(elem.name)}
+                      })
+                  alert(admins)
+                  }
+
+                let unique_hobbies=function(worckers){
+                  let hobbies=[];
+                  worckers.forEach(function(e){
+                   e.hobby.forEach(function(i){hobbies.push(i)})})
+                  let uniq_hobies=[hobbies[0]]
+              for (let i=0;i<hobbies.length;i++)
+              {
+                
+                for(let j=0;j<uniq_hobies.length;j++)
+                
+                {
+                 
+                  if(uniq_hobies[j]!==hobbies[i]) {
+                    uniq_hobies.push(hobbies[i])
+                  }
+                }
+              }alert(uniq_hobies)
+            }
+            
+           
+                 
+                
+medium_age(worckers)
+name_of_admins(worckers)
+//unique_hobbies(worckers)
+        </script>
+        
+    </body>
+</html>
